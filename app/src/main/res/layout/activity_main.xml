@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintBottom_toTopOf="@+id/btnSpeak"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/btnSpeak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@android:drawable/ic_btn_speak_now"
+        app:layout_constraintTop_toBottomOf="@+id/videoView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tap_on_mic"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintTop_toBottomOf="@+id/btnSpeak"
+        app:layout_constraintStart_toStartOf="@+id/btnSpeak"
+        app:layout_constraintEnd_toEndOf="@+id/btnSpeak"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/prevVid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_media_rew"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/btnSpeak"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+
+        />
+
+    <ImageButton
+        android:id="@+id/nextVid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_media_ff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/btnSpeak"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+
+        />
+
+
+</android.support.constraint.ConstraintLayout>
